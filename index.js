@@ -17,7 +17,7 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
 console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
-// change for save
+// Change for save
 
 // ⭐️ Example Challenge END ⭐️
 
