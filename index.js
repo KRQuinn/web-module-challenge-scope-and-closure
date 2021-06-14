@@ -17,7 +17,7 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
 console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
-// Change for save
+
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -29,11 +29,15 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+    One has closure, the other does not
+
   2. Which of the two uses a closure? How can you tell?
-  
+    Counter1 uses a closure, because it reaches into it's parent function to grab the count variable.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+        Counter1 would be better in a scenario where you wouldn't want to expose variables globally (Helpful for multi-developer teams to not step on each others toes, and is also good practice to avoid a potential security risk).
+        Counter2 would be preferable if you needed to pass a variable between multiple functions (Say between High Order Functions and callBacks).  
 */
 
 // counter1 code
@@ -64,7 +68,7 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(/*Code Here*/){
-    /*Code Here*/
+  return Math.floor(Math.random() * 3);
 }
 
 
